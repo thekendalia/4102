@@ -1,5 +1,6 @@
 target filter=lfs diff=lfs merge=lfs -text
 libserenity-681123de529611cf.rlib filter=lfs diff=lfs merge=lfs -text
+*.rlib filter=lfs diff=lfs merge=lfs -text
 *.DS_Store filter=lfs diff=lfs merge=lfs -text
 *.package-cache filter=lfs diff=lfs merge=lfs -text
 *.package-cache-mutate filter=lfs diff=lfs merge=lfs -text
@@ -534,7 +535,6 @@ libserenity-681123de529611cf.rlib filter=lfs diff=lfs merge=lfs -text
 /target/debug/build/unicase-50671ecbe75cf222/stderr filter=lfs diff=lfs merge=lfs -text
 /target/debug/build/unicase-532a945c7db498cd/build-script-build filter=lfs diff=lfs merge=lfs -text
 /target/debug/build/unicase-532a945c7db498cd/build_script_build-532a945c7db498cd filter=lfs diff=lfs merge=lfs -text
-*.rlib filter=lfs diff=lfs merge=lfs -text
 *.dylib filter=lfs diff=lfs merge=lfs -text
 /target/debug/deps/my_project-38bccefc5b497261 filter=lfs diff=lfs merge=lfs -text
 *.bin filter=lfs diff=lfs merge=lfs -text
