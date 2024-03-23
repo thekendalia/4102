@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9fdd4df67eaf798e367e7bcf015b76cc44c4e4b5611196db050d9a22a7c4566b
-size 790
+{"rustc":18179249609700281463,"features":"[\"builder\", \"bytes\", \"cache\", \"chrono\", \"client\", \"command_attr\", \"dashmap\", \"default\", \"default_no_backend\", \"flate2\", \"framework\", \"fxhash\", \"gateway\", \"http\", \"levenshtein\", \"mime_guess\", \"model\", \"parking_lot\", \"percent-encoding\", \"reqwest\", \"rustls_backend\", \"standard_framework\", \"static_assertions\", \"tokio-tungstenite\", \"typemap_rev\", \"utils\", \"uwl\"]","declared_features":"","target":427768481117760528,"profile":1200860260873630964,"path":9244234630047315643,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/serenity-8e9107a59f3b3979/dep-build-script-build-script-build"}}],"rustflags":[],"metadata":12311722921576964545,"config":2202906307356721367,"compile_kind":0}

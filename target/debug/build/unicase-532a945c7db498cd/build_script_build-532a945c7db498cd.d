@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10ae7bdc061641479f266c7c942bb287a04e608b01ab3bf5d148a8c1a944ae7f
-size 510
+/Users/kendall/Desktop/RustTesting/target/debug/build/unicase-532a945c7db498cd/build_script_build-532a945c7db498cd: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicase-2.7.0/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/unicase-532a945c7db498cd/build_script_build-532a945c7db498cd.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicase-2.7.0/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/unicase-2.7.0/build.rs:

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9ced6083bd6ce602dd40573fee445c82537b5af8b6ee21c692d5ca5494073f01
-size 639
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libbitflags-d45aa38434587f12.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libbitflags-d45aa38434587f12.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/bitflags-d45aa38434587f12.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/bitflags-1.3.2/src/lib.rs:

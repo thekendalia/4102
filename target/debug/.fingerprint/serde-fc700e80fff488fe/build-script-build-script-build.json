@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7860640c448e11cb3d670377b5e8f606e16bac0ef9430ef0cb9c17d67fbbe531
-size 439
+{"rustc":18179249609700281463,"features":"[\"alloc\", \"default\", \"derive\", \"serde_derive\", \"std\"]","declared_features":"","target":2297296889237502566,"profile":1200860260873630964,"path":12183078754329458100,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/serde-fc700e80fff488fe/dep-build-script-build-script-build"}}],"rustflags":[],"metadata":3767376778934503013,"config":2202906307356721367,"compile_kind":0}

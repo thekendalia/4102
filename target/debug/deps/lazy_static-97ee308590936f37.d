@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3ffd2972a9f12a50ef2c11efe0885504e0e07b3b026e6a2243b83247cc3e54f1
-size 1081
+/Users/kendall/Desktop/RustTesting/target/debug/deps/liblazy_static-97ee308590936f37.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/inline_lazy.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/liblazy_static-97ee308590936f37.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/inline_lazy.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/lazy_static-97ee308590936f37.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/inline_lazy.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lazy_static-1.4.0/src/inline_lazy.rs:

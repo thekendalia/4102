@@ -1,3 +1,2 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60c8dcde12d8b5024f3f5c84f93d294b184d0018f767609946c56a7cbee2788d
-size 81
+cargo:rerun-if-changed=build/probe.rs
+cargo:rerun-if-env-changed=RUSTC_BOOTSTRAP

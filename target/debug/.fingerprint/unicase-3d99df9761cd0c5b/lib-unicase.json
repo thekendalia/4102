@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cae6dda3ac2253f35ba235f75a0630981d3419e0dea4eacaf4d744ca0adddd2c
-size 432
+{"rustc":18179249609700281463,"features":"[]","declared_features":"","target":16676666208926557211,"profile":4374887572363265115,"path":11117388914149125109,"deps":[[15279721705773053031,"build_script_build",false,14675238918241824752]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/unicase-3d99df9761cd0c5b/dep-lib-unicase"}}],"rustflags":[],"metadata":11494574314977672827,"config":2202906307356721367,"compile_kind":0}

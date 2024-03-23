@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4f7e5e124cf7834dc9384e1c3453afe633e4d06d8a2effd8081202b00861a0e6
-size 1081
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtokio_macros-926379fe3b2e3d2b.dylib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/entry.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/select.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/tokio_macros-926379fe3b2e3d2b.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/entry.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/select.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/entry.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tokio-macros-2.2.0/src/select.rs:

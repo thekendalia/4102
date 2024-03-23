@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bbbc91d3b26dd4ca5bdee9b605a795f47f7d3875c40f450a3d3531a7c399b5dd
-size 667
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsync_wrapper-828d938745aa06b2.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-0.1.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsync_wrapper-828d938745aa06b2.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-0.1.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/sync_wrapper-828d938745aa06b2.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-0.1.2/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sync_wrapper-0.1.2/src/lib.rs:

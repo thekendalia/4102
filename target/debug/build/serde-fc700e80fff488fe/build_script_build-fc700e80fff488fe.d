@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5991cd7da9d2bfde7663e2745abf5afa869bf53b43010c591f1d90320498d84b
-size 506
+/Users/kendall/Desktop/RustTesting/target/debug/build/serde-fc700e80fff488fe/build_script_build-fc700e80fff488fe: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.197/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/serde-fc700e80fff488fe/build_script_build-fc700e80fff488fe.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.197/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serde-1.0.197/build.rs:

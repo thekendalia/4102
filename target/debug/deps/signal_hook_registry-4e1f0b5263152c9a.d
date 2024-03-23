@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89f579fd070c99fd9530b84b02859505c882040438b3f9a6d9cbb6d2f902196c
-size 1172
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsignal_hook_registry-4e1f0b5263152c9a.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/half_lock.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsignal_hook_registry-4e1f0b5263152c9a.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/half_lock.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/signal_hook_registry-4e1f0b5263152c9a.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/half_lock.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/signal-hook-registry-1.4.1/src/half_lock.rs:

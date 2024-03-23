@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:60389d08fd44487fc816df3e991e7ca729354b8fd7edb5572b27288dcfe3c426
-size 996
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libitoa-c2dfc4545b0373e2.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/udiv128.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libitoa-c2dfc4545b0373e2.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/udiv128.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/itoa-c2dfc4545b0373e2.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/udiv128.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.10/src/udiv128.rs:

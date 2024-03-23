@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b5f6e947054d8a26d75e53965afb8106db17c4ac5de536150c98c578ff5b7dd8
-size 1771
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsecrecy-ac8f146b2374c861.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/boxed.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/string.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/vec.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsecrecy-ac8f146b2374c861.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/boxed.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/string.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/vec.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/secrecy-ac8f146b2374c861.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/boxed.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/string.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/vec.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/boxed.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/string.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/secrecy-0.8.0/src/vec.rs:

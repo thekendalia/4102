@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a8e4d64a4aed95d24f873ff6dd6a4b06e1fc80dca9e97efc046987dd16d0c1e1
-size 316
+cargo:rustc-cfg=has_to_int_unchecked
+cargo:rustc-cfg=has_reverse_bits
+cargo:rustc-cfg=has_leading_trailing_ones
+cargo:rustc-cfg=has_div_euclid
+cargo:rustc-cfg=has_is_subnormal
+cargo:rustc-cfg=has_total_cmp
+cargo:rustc-cfg=has_int_to_from_bytes
+cargo:rustc-cfg=has_float_to_from_bytes
+cargo:rerun-if-changed=build.rs

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:62e6f8e017656a9333854a522a0bf928a39ee67bd15a2021748e7a932214e57e
-size 1005
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libzeroize-f6d4b37105c00c34.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/x86.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libzeroize-f6d4b37105c00c34.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/x86.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/zeroize-f6d4b37105c00c34.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/x86.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/zeroize-1.7.0/src/x86.rs:

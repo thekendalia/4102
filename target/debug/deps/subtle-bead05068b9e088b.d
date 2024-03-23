@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6705fdd34a62455faf8eed695896ac863ba7dea73135e92ed16c23dfb79bbdc8
-size 625
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsubtle-bead05068b9e088b.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subtle-2.5.0/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsubtle-bead05068b9e088b.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subtle-2.5.0/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/subtle-bead05068b9e088b.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subtle-2.5.0/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/subtle-2.5.0/src/lib.rs:

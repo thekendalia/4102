@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c9e9181f5051e1f7add74670e9c34765a31908d4ff47a207fe813e1e03c52ef5
-size 643
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsmallvec-e226a8b9637bb991.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/smallvec-1.13.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libsmallvec-e226a8b9637bb991.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/smallvec-1.13.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/smallvec-e226a8b9637bb991.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/smallvec-1.13.2/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/smallvec-1.13.2/src/lib.rs:

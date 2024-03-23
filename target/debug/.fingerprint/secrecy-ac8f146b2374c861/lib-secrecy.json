@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c3b84f2d2f762374661ae458497fd4b90913856261a34fb75d5e218617d9dcc
-size 506
+{"rustc":18179249609700281463,"features":"[\"alloc\", \"default\", \"serde\"]","declared_features":"","target":7705840817056439257,"profile":4374887572363265115,"path":998099493388513748,"deps":[[15098350142499636151,"zeroize",false,763689659918626898],[15202177393746453064,"serde",false,6831625223825133733]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/secrecy-ac8f146b2374c861/dep-lib-secrecy"}}],"rustflags":[],"metadata":16541369516994363773,"config":2202906307356721367,"compile_kind":0}

@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4e3214064588dbf8e2318a2505d99503f230adbc72298e9993108d9ef3cc4bdf
-size 1402
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libautocfg-189eb82df2d89f4c.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/error.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/version.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libautocfg-189eb82df2d89f4c.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/error.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/version.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/autocfg-189eb82df2d89f4c.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/error.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/version.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/error.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/autocfg-1.1.0/src/version.rs:

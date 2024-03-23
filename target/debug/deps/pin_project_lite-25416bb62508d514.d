@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0b0bc175f2ad7b55e5d321e20c2350ba144ab7d34810179510db5c64090ea5d2
-size 699
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libpin_project_lite-25416bb62508d514.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pin-project-lite-0.2.13/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libpin_project_lite-25416bb62508d514.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pin-project-lite-0.2.13/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/pin_project_lite-25416bb62508d514.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pin-project-lite-0.2.13/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/pin-project-lite-0.2.13/src/lib.rs:

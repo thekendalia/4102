@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d33e90aa0e97fcb6ea89da2125c0a3e26f0940b072d4b7feb8b6c4d2c74ecef
-size 674
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libcrypto_common-1f3385f853fea1b5.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crypto-common-0.1.6/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libcrypto_common-1f3385f853fea1b5.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crypto-common-0.1.6/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/crypto_common-1f3385f853fea1b5.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crypto-common-0.1.6/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crypto-common-0.1.6/src/lib.rs:

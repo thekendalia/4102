@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b582085777431d117754711c166ae858e57f562d15b59012960362d0aad401dc
-size 419
+{"rustc":18179249609700281463,"features":"[]","declared_features":"","target":18084257967804057555,"profile":4374887572363265115,"path":18151859039400991579,"deps":[[8926101378076943148,"byteorder",false,3864593815237738758]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/fxhash-fe0202b97ea5793d/dep-lib-fxhash"}}],"rustflags":[],"metadata":13222953101665094795,"config":2202906307356721367,"compile_kind":0}

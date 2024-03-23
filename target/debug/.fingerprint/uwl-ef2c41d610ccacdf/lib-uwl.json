@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e998bf110e242fcad533180c7848c0a9473ec395dedad2044d6e3baa99239a7
-size 353
+{"rustc":18179249609700281463,"features":"[]","declared_features":"","target":14563585619335013242,"profile":4374887572363265115,"path":11945945899540707200,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/uwl-ef2c41d610ccacdf/dep-lib-uwl"}}],"rustflags":[],"metadata":8671548308680395183,"config":2202906307356721367,"compile_kind":0}

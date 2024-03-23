@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:17b671a2a44c62829ec97ee87057fd95f05686ebfde7b1fed672b6cec49ffe02
-size 515
+/Users/kendall/Desktop/RustTesting/target/debug/build/httparse-eab77ed26688dd6d/build_script_build-eab77ed26688dd6d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/httparse-eab77ed26688dd6d/build_script_build-eab77ed26688dd6d.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/httparse-1.8.0/build.rs:

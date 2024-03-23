@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b736308c6b24d0d8b91bdb1ac14f78178c226559c17962d041ad145197602839
-size 41
+cargo:rustc-cfg=has_const_fn_trait_bound

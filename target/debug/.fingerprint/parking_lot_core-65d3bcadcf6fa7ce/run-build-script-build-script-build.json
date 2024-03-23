@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8f4931c9e59757a0aa6c63fe6276458c71660b6b108775eeed06206129fb3eec
-size 349
+{"rustc":18179249609700281463,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[3556327346382006477,"build_script_build",false,7985530358205503139]],"local":[{"RerunIfChanged":{"output":"debug/build/parking_lot_core-65d3bcadcf6fa7ce/output","paths":["build.rs"]}}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

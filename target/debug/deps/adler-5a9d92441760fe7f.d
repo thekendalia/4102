@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8327c0d5dcc5f33828dde217bb659935b59e6db06c7c473daf803007c131f9bb
-size 987
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libadler-5a9d92441760fe7f.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/algo.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libadler-5a9d92441760fe7f.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/algo.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/adler-5a9d92441760fe7f.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/algo.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/adler-1.0.2/src/algo.rs:

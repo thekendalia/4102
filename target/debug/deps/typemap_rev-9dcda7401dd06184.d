@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e71e2bc8793d2c5f6569b685eb904ec3ee7a0d45d5e58c71dd3f745747ac2ab
-size 660
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtypemap_rev-9dcda7401dd06184.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typemap_rev-0.3.0/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtypemap_rev-9dcda7401dd06184.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typemap_rev-0.3.0/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/typemap_rev-9dcda7401dd06184.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typemap_rev-0.3.0/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typemap_rev-0.3.0/src/lib.rs:

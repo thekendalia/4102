@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc3c9fbadf74260f9ac4371777fe2c3dd5784be3e507a0d21de8db814db35f7e
-size 518
+/Users/kendall/Desktop/RustTesting/target/debug/build/serenity-8e9107a59f3b3979/build_script_build-8e9107a59f3b3979: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serenity-0.12.1/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/serenity-8e9107a59f3b3979/build_script_build-8e9107a59f3b3979.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serenity-0.12.1/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/serenity-0.12.1/build.rs:

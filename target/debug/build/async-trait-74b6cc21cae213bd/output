@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:69c0be36d2cc082b78ddf5a7f034abe2a68bd7c60a209839e032d36f3dc446e7
-size 35
+cargo:rerun-if-env-changed=DOCS_RS

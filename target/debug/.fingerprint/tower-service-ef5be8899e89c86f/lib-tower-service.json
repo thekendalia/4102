@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:090678ea32ae441068659bd21f21bcfedbee60f90df5b4dfd77d9c411561d42c
-size 374
+{"rustc":18179249609700281463,"features":"[]","declared_features":"","target":11130196197589266115,"profile":4374887572363265115,"path":16753378260259777021,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/tower-service-ef5be8899e89c86f/dep-lib-tower-service"}}],"rustflags":[],"metadata":13625925058035360014,"config":2202906307356721367,"compile_kind":0}

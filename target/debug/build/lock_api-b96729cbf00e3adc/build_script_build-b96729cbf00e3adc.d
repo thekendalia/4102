@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:09814d5e4e28c46855560e64c55cd71ee358c41dd5b405ca2d9d4be44fa69e4d
-size 518
+/Users/kendall/Desktop/RustTesting/target/debug/build/lock_api-b96729cbf00e3adc/build_script_build-b96729cbf00e3adc: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/lock_api-b96729cbf00e3adc/build_script_build-b96729cbf00e3adc.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/lock_api-0.4.11/build.rs:

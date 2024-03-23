@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:695555291acfbdc30df0518b37e9e7b6cd6735fabb508c76fa63ac713b31797a
-size 528
+/Users/kendall/Desktop/RustTesting/target/debug/build/native-tls-6820bdd8ba291256/build_script_build-6820bdd8ba291256: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/native-tls-0.2.11/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/native-tls-6820bdd8ba291256/build_script_build-6820bdd8ba291256.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/native-tls-0.2.11/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/native-tls-0.2.11/build.rs:

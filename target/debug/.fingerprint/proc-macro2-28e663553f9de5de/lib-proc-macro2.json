@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1d4056400efaf01c4e4b184a216d53795950f49bb70600babff3d4a6a1781ea6
-size 530
+{"rustc":18179249609700281463,"features":"[\"default\", \"proc-macro\"]","declared_features":"","target":16714894217519287322,"profile":1200860260873630964,"path":11741892870965310435,"deps":[[8422320316573217860,"build_script_build",false,13378580907948026898],[10045147784146067611,"unicode_ident",false,5676382379596050662]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/proc-macro2-28e663553f9de5de/dep-lib-proc-macro2"}}],"rustflags":[],"metadata":7635439851376710101,"config":2202906307356721367,"compile_kind":0}

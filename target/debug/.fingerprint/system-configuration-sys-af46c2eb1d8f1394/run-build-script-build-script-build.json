@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:27c101b7ee63e66cd29e19f6e1b5ee4093fbb7ccc2124ee3a973da15df97a9c3
-size 271
+{"rustc":18179249609700281463,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[14501549520699524844,"build_script_build",false,10199459828621734842]],"local":[{"Precalculated":"0.5.0"}],"rustflags":[],"metadata":0,"config":0,"compile_kind":0}

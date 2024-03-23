@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0a479dfcbda5aa268f23ba70477b22c5bf3ccf66ff00fa7f2e401507daf1777d
-size 674
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtower_service-ef5be8899e89c86f.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-service-0.3.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtower_service-ef5be8899e89c86f.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-service-0.3.2/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/tower_service-ef5be8899e89c86f.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-service-0.3.2/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tower-service-0.3.2/src/lib.rs:

@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c0b75f14b028b2f45d2d757d38bd22e62ab360978a5f1d373d575dc6d4be42f
-size 520
+/Users/kendall/Desktop/RustTesting/target/debug/build/crc32fast-76a5f95bd11ac08d/build_script_build-76a5f95bd11ac08d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.4.0/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/crc32fast-76a5f95bd11ac08d/build_script_build-76a5f95bd11ac08d.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.4.0/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/crc32fast-1.4.0/build.rs:

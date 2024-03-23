@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6995343b025a973f52ad7112b5b9e0bd118e706d6693daa4e261212f0fa35c58
-size 1428
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtime_core-855eff372bb57ab9.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/convert.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/util.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtime_core-855eff372bb57ab9.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/convert.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/util.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/time_core-855eff372bb57ab9.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/convert.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/util.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/convert.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/time-core-0.1.2/src/util.rs:

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1c71f221c0c2525532682106b7336b6d518eb967dbaff833c3616102b6d51eac
-size 588
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libfnv-700cbd4405a4d5f3.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fnv-1.0.7/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libfnv-700cbd4405a4d5f3.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fnv-1.0.7/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/fnv-700cbd4405a4d5f3.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fnv-1.0.7/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fnv-1.0.7/lib.rs:

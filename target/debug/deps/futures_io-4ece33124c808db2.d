@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:49c6b1d1bf42aa43b6e311ddd956294dd0b7fb002c8a63ecaf892dddcf81d3ac
-size 657
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libfutures_io-4ece33124c808db2.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-io-0.3.30/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libfutures_io-4ece33124c808db2.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-io-0.3.30/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/futures_io-4ece33124c808db2.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-io-0.3.30/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/futures-io-0.3.30/src/lib.rs:

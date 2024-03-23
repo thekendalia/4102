@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b74e0e565248e973956c350552524856ebfe2782b92b66808bdf7446f3e280d
-size 380
+{"rustc":18179249609700281463,"features":"[]","declared_features":"","target":12231725525480381794,"profile":4374887572363265115,"path":15380202136496437917,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/pin-project-lite-25416bb62508d514/dep-lib-pin-project-lite"}}],"rustflags":[],"metadata":13744775421762973511,"config":2202906307356721367,"compile_kind":0}

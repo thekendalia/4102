@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7754a48e19500d176f7a3e667de72f04b93addaa30a169c8d69c14fd6a934490
-size 390
+{"rustc":18179249609700281463,"features":"[\"alloc\", \"std\"]","declared_features":"","target":15610650933893431490,"profile":4374887572363265115,"path":10151787490033329312,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/futures-task-924e2397d237fb3f/dep-lib-futures-task"}}],"rustflags":[],"metadata":14276283763424674291,"config":2202906307356721367,"compile_kind":0}

@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1ed2ac3a5f7b2328237fe6e1208d496f2b9a653922f0026e0026aacd7023179
-size 988
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libslab-c12462bb92b62411.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/builder.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libslab-c12462bb92b62411.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/builder.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/slab-c12462bb92b62411.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/builder.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/slab-0.4.9/src/builder.rs:

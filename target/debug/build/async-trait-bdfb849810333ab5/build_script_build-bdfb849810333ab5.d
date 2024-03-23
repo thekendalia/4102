@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:863cc0ad8a87050bb94b18249be008f1072079ba183a4c03b04ec3b43d4c0ed4
-size 533
+/Users/kendall/Desktop/RustTesting/target/debug/build/async-trait-bdfb849810333ab5/build_script_build-bdfb849810333ab5: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-trait-0.1.78/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/async-trait-bdfb849810333ab5/build_script_build-bdfb849810333ab5.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-trait-0.1.78/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/async-trait-0.1.78/build.rs:

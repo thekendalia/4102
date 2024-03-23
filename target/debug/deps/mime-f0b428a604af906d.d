@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:13cd40e327c3199c52ae708a6affe4a115d7c3a7203a7e687f8a2616970199b1
-size 988
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libmime-f0b428a604af906d.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libmime-f0b428a604af906d.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/mime-f0b428a604af906d.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/mime-0.3.17/src/parse.rs:

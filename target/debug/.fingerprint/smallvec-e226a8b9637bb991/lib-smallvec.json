@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1be24be3cb80a300aa1836d0a6e86b4feecf5341b2e0f9f20156aea471ba1aa5
-size 396
+{"rustc":18179249609700281463,"features":"[\"const_generics\", \"const_new\"]","declared_features":"","target":15021638563153388439,"profile":4374887572363265115,"path":8310527619103026761,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/smallvec-e226a8b9637bb991/dep-lib-smallvec"}}],"rustflags":[],"metadata":15767570753543272391,"config":2202906307356721367,"compile_kind":0}

@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e9d74e89f5d2bb4969d16443bc9fc0b33602f21eea4d1c435bd37c1df1b402f4
-size 653
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libequivalent-1987a04a349eb12e.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/equivalent-1.0.1/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libequivalent-1987a04a349eb12e.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/equivalent-1.0.1/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/equivalent-1987a04a349eb12e.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/equivalent-1.0.1/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/equivalent-1.0.1/src/lib.rs:

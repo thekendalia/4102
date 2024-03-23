@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1590a8995c701dba81c6e453089ae5ae2fa634e9ad41bd63f05fe40e4a2c0eac
-size 37
+cargo:rerun-if-changed=build/main.rs

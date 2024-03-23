@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f40dafcc61ba473a875314497e7ba2e95c6ed0193f0722d1153c5dbaf2f05ccb
-size 1136
+/Users/kendall/Desktop/RustTesting/target/debug/deps/librustls_pki_types-ee13c7864b5164cc.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/server_name.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/librustls_pki_types-ee13c7864b5164cc.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/server_name.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/rustls_pki_types-ee13c7864b5164cc.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/server_name.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.4.0/src/server_name.rs:

@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2593644bd07a18b80b3d8c3be02e7b0c3459ed55f0922283030fc44e610a5c90
-size 41
+registries.crates-io.protocol = "sparse"

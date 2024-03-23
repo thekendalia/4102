@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:af079ab42aca6854c11c25435c536fd6ff0301a1b7d42dd59e8459c36b21cd56
-size 437
+{"rustc":18179249609700281463,"features":"[\"with-alloc\"]","declared_features":"","target":4899821511404974979,"profile":4374887572363265115,"path":405701931212956594,"deps":[[18214773122388295386,"adler",false,9487091819286481411]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/miniz_oxide-7faa8f32603a235f/dep-lib-miniz_oxide"}}],"rustflags":[],"metadata":16625842183394340697,"config":2202906307356721367,"compile_kind":0}

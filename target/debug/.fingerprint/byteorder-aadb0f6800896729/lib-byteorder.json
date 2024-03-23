@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d9ce4bcb8203cd760a426094867fa098b5679fcc8a081d914b3ea9face8c1340
-size 384
+{"rustc":18179249609700281463,"features":"[\"default\", \"std\"]","declared_features":"","target":18335588937564793828,"profile":4374887572363265115,"path":4434580407726665643,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/byteorder-aadb0f6800896729/dep-lib-byteorder"}}],"rustflags":[],"metadata":5398730104718078656,"config":2202906307356721367,"compile_kind":0}

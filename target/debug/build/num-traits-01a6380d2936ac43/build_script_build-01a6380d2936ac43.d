@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:eaa9ad6feaaddbec9c3cd7e8324f2b668e0eef90525b2f13c66a48562aa740c6
-size 528
+/Users/kendall/Desktop/RustTesting/target/debug/build/num-traits-01a6380d2936ac43/build_script_build-01a6380d2936ac43: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/num-traits-0.2.18/build.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/build/num-traits-01a6380d2936ac43/build_script_build-01a6380d2936ac43.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/num-traits-0.2.18/build.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/num-traits-0.2.18/build.rs:

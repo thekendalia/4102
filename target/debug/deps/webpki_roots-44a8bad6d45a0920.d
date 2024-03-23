@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef95f9b96eb66eae9f1c3bcbc913a97b48172919c6eed390f2c03c4ccdf238ca
-size 671
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libwebpki_roots-44a8bad6d45a0920.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/webpki-roots-0.26.1/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libwebpki_roots-44a8bad6d45a0920.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/webpki-roots-0.26.1/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/webpki_roots-44a8bad6d45a0920.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/webpki-roots-0.26.1/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/webpki-roots-0.26.1/src/lib.rs:

@@ -1,3 +1,1 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e11d024b3d53697ca06b128c7452812640a21e7c8d30636f4862375a178bb346
-size 389
+{"rustc":18179249609700281463,"features":"[\"alloc\", \"default\", \"std\"]","declared_features":"","target":13876443730220172507,"profile":4374887572363265115,"path":7972154266050224419,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/memchr-7a2dedc6929593cf/dep-lib-memchr"}}],"rustflags":[],"metadata":7513296495906230968,"config":2202906307356721367,"compile_kind":0}

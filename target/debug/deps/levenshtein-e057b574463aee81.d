@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:aded26d8d87b36dc5ae04a784e4f3ec883c227384ecfc79a8be0896d8b1d2025
-size 660
+/Users/kendall/Desktop/RustTesting/target/debug/deps/liblevenshtein-e057b574463aee81.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/levenshtein-1.0.5/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/liblevenshtein-e057b574463aee81.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/levenshtein-1.0.5/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/levenshtein-e057b574463aee81.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/levenshtein-1.0.5/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/levenshtein-1.0.5/src/lib.rs:

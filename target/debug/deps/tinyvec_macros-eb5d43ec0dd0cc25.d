@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a9c5c2e38157ef240a7dd2d25bae41e0ff84982c9fced6cb4ab032f8e7f9f5ae
-size 681
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtinyvec_macros-eb5d43ec0dd0cc25.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tinyvec_macros-0.1.1/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libtinyvec_macros-eb5d43ec0dd0cc25.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tinyvec_macros-0.1.1/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/tinyvec_macros-eb5d43ec0dd0cc25.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tinyvec_macros-0.1.1/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tinyvec_macros-0.1.1/src/lib.rs:

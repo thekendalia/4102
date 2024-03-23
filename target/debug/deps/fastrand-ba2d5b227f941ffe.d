@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:013c2be695d3b1dfc178a4ac9cae498537f7c22db0891d706ca808e8b531ad7a
-size 1044
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libfastrand-ba2d5b227f941ffe.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/global_rng.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libfastrand-ba2d5b227f941ffe.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/global_rng.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/fastrand-ba2d5b227f941ffe.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/lib.rs /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/global_rng.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/lib.rs:
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/fastrand-2.0.1/src/global_rng.rs:

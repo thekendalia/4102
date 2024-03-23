@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9a41c74aa09664c5de9ea04397816707621ecd893df9ce5145970a4a0a732e0a
-size 653
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libscopeguard-84c9d86cc11b40d2.rmeta: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.2.0/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/libscopeguard-84c9d86cc11b40d2.rlib: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.2.0/src/lib.rs
+
+/Users/kendall/Desktop/RustTesting/target/debug/deps/scopeguard-84c9d86cc11b40d2.d: /Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.2.0/src/lib.rs
+
+/Users/kendall/.cargo/registry/src/index.crates.io-6f17d22bba15001f/scopeguard-1.2.0/src/lib.rs:
