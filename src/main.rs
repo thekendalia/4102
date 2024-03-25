@@ -1,14 +1,16 @@
-use serde::{Deserialize, Serialize};
+use serde::{Deserialize};
 use reqwest;
 use reqwest::header;
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Coord {
     lon: f64,
     lat: f64,
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Weather {
     id: u32,
     main: String,
@@ -17,6 +19,7 @@ struct Weather {
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Main {
     temp: f64,
     feels_like: f64,
@@ -27,12 +30,14 @@ struct Main {
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Wind {
     speed: f64,
     deg: u32,
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Sys {
     #[serde(rename = "type")]
     sys_type: u32,
@@ -43,6 +48,7 @@ struct Sys {
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct WeatherResponse {
     coord: Coord,
     weather: Vec<Weather>,
@@ -61,12 +67,14 @@ struct WeatherResponse {
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Rain {
     #[serde(rename = "1h")]
     rain_1h: f64,
 }
 
 #[derive(Debug, Deserialize)]
+#[allow(dead_code)]
 struct Clouds {
     all: u32,
 }
@@ -75,7 +83,7 @@ struct Clouds {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut line = String::new();
     println!("Enter a city :");
-    let b1 = std::io::stdin().read_line(&mut line).unwrap();
+    let _b1 = std::io::stdin().read_line(&mut line).unwrap();
     println!("City: {}", line);
     println!("Please wait...");
 
