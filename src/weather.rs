@@ -22,10 +22,10 @@ pub struct Weather {
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Main {
-    temp: f64,
+    pub temp: f64,
     feels_like: f64,
-    temp_min: f64,
-    temp_max: f64,
+    pub temp_min: f64,
+    pub temp_max: f64,
     pressure: u32,
     humidity: u32,
 }
@@ -69,13 +69,13 @@ pub struct WeatherResponse {
     pub weather: Vec<Weather>,
     pub main: Main,
     pub wind: Wind,
-    pub rain: Rain,
+    pub rain: Option<Rain>,
     pub clouds: Clouds,
     pub sys: Sys,
     pub name: String,
 }
 
-pub async fn get_weather(city: &str) -> Result<WeatherResponse, Box<dyn std::error::Error>> {
+pub async fn get_weather(city: &str) -> Result<WeatherResponse, Box<dyn std::error::Error + Send + Sync>> {
     let mut headers = header::HeaderMap::new();
     let api_key = env::var("API_KEY")?;
     headers.insert("X-RapidAPI-Host", "weather-api138.p.rapidapi.com".parse().unwrap());
