@@ -1,8 +1,11 @@
 mod weather;
 use weather::get_weather;
+use dotenv::dotenv;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    dotenv().ok();
+
     let mut line = String::new();
     println!("Enter a city :");
     let _b1 = std::io::stdin().read_line(&mut line).unwrap();
