@@ -1,117 +1,63 @@
-use serde::{Deserialize};
-use reqwest;
-use reqwest::header;
+use dotenv::dotenv;
+use serenity::async_trait;
+use serenity::client::{Context as SContext, EventHandler};
+use serenity::model::gateway::Ready;
+use poise::serenity_prelude as serenity;
+mod weather;
+use weather::get_weather;
 
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Coord {
-    lon: f64,
-    lat: f64,
+struct Data {} // User data, which is stored and accessible in all command invocations
+type Error = Box<dyn std::error::Error + Send + Sync>;
+type Context<'a> = poise::Context<'a, Data, Error>;
+
+struct Handler;
+#[async_trait]
+impl EventHandler for Handler {
+    async fn ready(&self, _: SContext, ready: Ready) {
+        println!("{} is connected!", ready.user.name);
+    }
 }
 
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Weather {
-    id: u32,
-    main: String,
-    description: String,
-    icon: String,
-}
-
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Main {
-    temp: f64,
-    feels_like: f64,
-    temp_min: f64,
-    temp_max: f64,
-    pressure: u32,
-    humidity: u32,
-}
-
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Wind {
-    speed: f64,
-    deg: u32,
-}
-
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Sys {
-    #[serde(rename = "type")]
-    sys_type: u32,
-    id: u32,
-    country: String,
-    sunrise: u64,
-    sunset: u64,
-}
-
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct WeatherResponse {
-    coord: Coord,
-    weather: Vec<Weather>,
-    base: String,
-    main: Main,
-    visibility: u32,
-    wind: Wind,
-    rain: Option<Rain>,
-    clouds: Clouds,
-    dt: u64,
-    sys: Sys,
-    timezone: i64,
-    id: u64,
-    name: String,
-    cod: u32,
-}
-
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Rain {
-    #[serde(rename = "1h")]
-    rain_1h: f64,
-}
-
-#[derive(Debug, Deserialize)]
-#[allow(dead_code)]
-struct Clouds {
-    all: u32,
+/// Displays your or another user's account creation date
+#[poise::command(slash_command, prefix_command)]
+async fn weather(
+    ctx: Context<'_>,
+    #[description = "City to check weather for"] city: Option<String>,
+) -> Result<(), Error> {
+    let city = city // If the user didn't provide a city, default to "San Francisco"
+        .as_deref()
+        .unwrap_or("Charlotte");
+    print!("City: {}", city);
+    let weather = get_weather(city).await?;
+    print!("{:?}", weather);
+    let response = format!("The weather in {} is:\n{:?}", weather.name, 
+        weather.main);
+    ctx.say(response).await?;
+    Ok(())
 }
 
 #[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let mut line = String::new();
-    println!("Enter a city :");
-    let _b1 = std::io::stdin().read_line(&mut line).unwrap();
-    println!("City: {}", line);
-    println!("Please wait...");
+async fn main() {
+    dotenv().ok();
+    let token = std::env::var("DISCORD_TOKEN").expect("missing DISCORD_TOKEN");
+    let intents = serenity::GatewayIntents::non_privileged();
 
-    let _user_name = String::new();
-    let mut headers = header::HeaderMap::new();
-    headers.insert("X-RapidAPI-Host", "weather-api138.p.rapidapi.com".parse().unwrap());
-    headers.insert("X-RapidAPI-Key", "b7b9396f11msh1ab0e0941d5e1e3p1582dejsn6bd8bdebbd1b".parse().unwrap());
+    let framework = poise::Framework::builder()
+        .options(poise::FrameworkOptions {
+            commands: vec![weather()],
+            ..Default::default()
+        })
+        .setup(|ctx, _ready, framework| {
+            Box::pin(async move {
+                poise::builtins::register_globally(ctx, &framework.options().commands).await?;
+                Ok(Data {})
+            })
+        })
+        .build();
 
-    let client = reqwest::Client::builder()
-        .build()?;
-    
-    let res = client.get(&format!("https://weather-api138.p.rapidapi.com/weather?city_name={}", line))
-        .headers(headers)
-        .send()
-        .await?
-        .text()
-        .await?;
-
-    let weather_response: WeatherResponse = serde_json::from_str(&res)?;
-
-    println!("Coordinates: {:?}", weather_response.coord);
-    println!("Weather: {:?}", weather_response.weather);
-    println!("Main: {:?}", weather_response.main);
-    println!("Wind: {:?}", weather_response.wind);
-    println!("Rain: {:?}", weather_response.rain);
-    println!("Clouds: {:?}", weather_response.clouds);
-    println!("Sys: {:?}", weather_response.sys);
-    println!("Name: {}", weather_response.name);
-
-    Ok(())
-} 
+    let client = serenity::ClientBuilder::new(token, intents)
+        .event_handler(Handler)
+        .framework(framework)
+        .await;
+    client.unwrap().start().await.unwrap();
+}
