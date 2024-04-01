@@ -1,8 +1,8 @@
 use dotenv::dotenv;
+use poise::serenity_prelude as serenity;
 use serenity::async_trait;
 use serenity::client::{Context as SContext, EventHandler};
 use serenity::model::gateway::Ready;
-use poise::serenity_prelude as serenity;
 mod weather;
 use weather::get_weather;
 
@@ -22,7 +22,6 @@ impl EventHandler for Handler {
     }
 }
 
-
 // Pose command macro to create a slash command
 #[poise::command(slash_command, prefix_command)]
 async fn weather(
@@ -31,16 +30,30 @@ async fn weather(
     #[description = "City to check weather for"] city: Option<String>,
 ) -> Result<(), Error> {
     // Default to Charlotte if no city is provided
-    let city = city // If the user didn't provide a city, default to "San Francisco"
+    let city = city // If the user didn't provide a city, default to "Charlotte"
         .as_deref()
         .unwrap_or("Charlotte");
 
-    // Get weather data from our weather API 
+    // Get weather data from our weather API
     let weather = get_weather(city).await?;
 
+    let fahrenheit = (weather.main.temp - 273.15) * (9. / 5.) + 32.;
+    let fahrenheit_feels_like = (weather.main.feels_like - 273.15) * (9. / 5.) + 32.;
+    let fahrenheit_temp_min = (weather.main.temp_min - 273.15) * (9. / 5.) + 32.;
+    let fahrenheit_temp_max = (weather.main.temp_max - 273.15) * (9. / 5.) + 32.;
+    let humidity_merc = weather.main.pressure as f64 * 0.02953;
+
     // Format the response as a string
-    let response = format!("The weather in {} is:\n{:?}", weather.name, 
-        weather.main);
+    let response = format!(
+        "The weather in {} is:\nTemp: {:.2}f, Feels Like: {:.2}f, Min Temp: {:.2}f, Max Temp: {:.2}f, Pressure: {:.2}inHg, Humidity: {:.2}%",
+        weather.name,
+        fahrenheit,
+        fahrenheit_feels_like,
+        fahrenheit_temp_min,
+        fahrenheit_temp_max,
+        humidity_merc,
+        weather.main.humidity
+    );
 
     // Send formatted response to Discord
     ctx.say(response).await?;
@@ -79,3 +92,4 @@ async fn main() {
     // Start the client
     client.unwrap().start().await.unwrap();
 }
+
