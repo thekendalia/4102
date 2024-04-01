@@ -1,6 +1,6 @@
-use serde::{Deserialize};
 use reqwest;
 use reqwest::header;
+use serde::Deserialize;
 use std::env;
 
 #[derive(Debug, Deserialize)]
@@ -23,11 +23,11 @@ pub struct Weather {
 #[allow(dead_code)]
 pub struct Main {
     pub temp: f64,
-    feels_like: f64,
+    pub feels_like: f64,
     pub temp_min: f64,
     pub temp_max: f64,
-    pressure: u32,
-    humidity: u32,
+    pub pressure: u32,
+    pub humidity: u32,
 }
 
 #[derive(Debug, Deserialize)]
@@ -59,7 +59,6 @@ pub struct Sys {
     country: String,
     sunrise: u64,
     sunset: u64,
-
 }
 
 #[derive(Debug, Deserialize)]
@@ -75,16 +74,24 @@ pub struct WeatherResponse {
     pub name: String,
 }
 
-pub async fn get_weather(city: &str) -> Result<WeatherResponse, Box<dyn std::error::Error + Send + Sync>> {
+pub async fn get_weather(
+    city: &str,
+) -> Result<WeatherResponse, Box<dyn std::error::Error + Send + Sync>> {
     let mut headers = header::HeaderMap::new();
     let api_key = env::var("API_KEY")?;
-    headers.insert("X-RapidAPI-Host", "weather-api138.p.rapidapi.com".parse().unwrap());
+    headers.insert(
+        "X-RapidAPI-Host",
+        "weather-api138.p.rapidapi.com".parse().unwrap(),
+    );
     headers.insert("X-RapidAPI-Key", api_key.parse().unwrap());
 
-    let client = reqwest::Client::builder()
-        .build()?;
-    
-    let res = client.get(&format!("https://weather-api138.p.rapidapi.com/weather?city_name={}", city))
+    let client = reqwest::Client::builder().build()?;
+
+    let res = client
+        .get(&format!(
+            "https://weather-api138.p.rapidapi.com/weather?city_name={}",
+            city
+        ))
         .headers(headers)
         .send()
         .await?
@@ -95,3 +102,4 @@ pub async fn get_weather(city: &str) -> Result<WeatherResponse, Box<dyn std::err
 
     Ok(weather_response)
 }
+
