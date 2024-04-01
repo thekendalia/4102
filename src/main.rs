@@ -35,28 +35,36 @@ async fn weather(
         .unwrap_or("Charlotte");
 
     // Get weather data from our weather API
-    let weather = get_weather(city).await?;
+    match get_weather(city).await {
+        Ok(weather) => {
+            let fahrenheit = (weather.main.temp - 273.15) * (9. / 5.) + 32.;
+            let fahrenheit_feels_like = (weather.main.feels_like - 273.15) * (9. / 5.) + 32.;
+            let fahrenheit_temp_min = (weather.main.temp_min - 273.15) * (9. / 5.) + 32.;
+            let fahrenheit_temp_max = (weather.main.temp_max - 273.15) * (9. / 5.) + 32.;
+            let humidity_merc = weather.main.pressure as f64 * 0.02953;
 
-    let fahrenheit = (weather.main.temp - 273.15) * (9. / 5.) + 32.;
-    let fahrenheit_feels_like = (weather.main.feels_like - 273.15) * (9. / 5.) + 32.;
-    let fahrenheit_temp_min = (weather.main.temp_min - 273.15) * (9. / 5.) + 32.;
-    let fahrenheit_temp_max = (weather.main.temp_max - 273.15) * (9. / 5.) + 32.;
-    let humidity_merc = weather.main.pressure as f64 * 0.02953;
+            // Format the response as a string
+            let response = format!(
+                "The weather in {} is:\nTemp: {:.2}°F, Feels Like: {:.2}°F, Min Temp: {:.2}°F, Max Temp: {:.2}°F, Pressure: {:.2}inHg, Humidity: {:.2}%",
+                weather.name,
+                fahrenheit,
+                fahrenheit_feels_like,
+                fahrenheit_temp_min,
+                fahrenheit_temp_max,
+                humidity_merc,
+                weather.main.humidity
+            );
 
-    // Format the response as a string
-    let response = format!(
-        "The weather in {} is:\nTemp: {:.2}f, Feels Like: {:.2}f, Min Temp: {:.2}f, Max Temp: {:.2}f, Pressure: {:.2}inHg, Humidity: {:.2}%",
-        weather.name,
-        fahrenheit,
-        fahrenheit_feels_like,
-        fahrenheit_temp_min,
-        fahrenheit_temp_max,
-        humidity_merc,
-        weather.main.humidity
-    );
+            // Send formatted response to Discord
+            ctx.say(response).await?;
+        },
+        Err(_) => {
+            let response = format!("The city '{}' doesn't exist or couldn't be found.", city);
+            // Send error response here
+            ctx.say(response).await?;
+        }
+    }
 
-    // Send formatted response to Discord
-    ctx.say(response).await?;
     Ok(())
 }
 
