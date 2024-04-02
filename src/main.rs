@@ -45,7 +45,7 @@ async fn weather(
 
             // Format the response as a string
             let response = format!(
-                "The weather in {} is:\nTemp: {:.2}°F, Feels Like: {:.2}°F, Min Temp: {:.2}°F, Max Temp: {:.2}°F, Pressure: {:.2}inHg, Humidity: {:.2}%",
+                "The weather in {} is:\n🌡️ Temp: {:.2}°F  😓 Feels Like: {:.2}°F,\n🧊 Min Temp: {:.2}°F  🔥 Max Temp: {:.2}°F\n🌬️ Pressure: {:.2}inHg  💧 Humidity: {:.2}%",
                 weather.name,
                 fahrenheit,
                 fahrenheit_feels_like,
