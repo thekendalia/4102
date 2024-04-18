@@ -1,15 +1,23 @@
+#![allow(unused_imports)]
+#![allow(dead_code)]
+
 use dotenv::dotenv;
 use poise::serenity_prelude as serenity;
 use serenity::async_trait;
 use serenity::client::{Context as SContext, EventHandler};
 use serenity::model::gateway::Ready;
+use poise::Context as PoiseContext;
+use serde::Deserialize;
+use reqwest::Client;
 mod weather;
+mod chatbot;
+use tokio;
 use weather::get_weather;
 
 // Boilerplate from Poise docs
-struct Data {} // User data, which is stored and accessible in all command invocations
-type Error = Box<dyn std::error::Error + Send + Sync>;
-type Context<'a> = poise::Context<'a, Data, Error>;
+type Data = ();
+pub type Error = Box<dyn std::error::Error + Send + Sync>;
+pub type Context<'a> = PoiseContext<'a, Data, Error>;
 
 // Serenity Event Handler
 struct Handler;
@@ -68,6 +76,42 @@ async fn weather(
     Ok(())
 }
 
+#[poise::command(slash_command, prefix_command)]
+pub async fn weather_joke(ctx: Context<'_>) -> Result<(), Error> {
+    let http_client = Client::new();
+    let api = std::env::var("OPENAI_API_KEY").expect("missing OPENAI_API_KEY");
+    let request_body = serde_json::json!({
+        "model": "gpt-3.5-turbo",
+        "messages": [
+            {
+                "role": "user",
+                "content": "tell me a joke about the weather or jokes about meteorologists"
+            }
+        ],
+        "max_tokens": 50,
+    });
+
+    let res = http_client
+        .post("https://api.openai.com/v1/chat/completions")
+        .bearer_auth(api)
+        .json(&request_body)
+        .send()
+        .await?;
+
+    let response_text = res.text().await?;
+    let response: chatbot::OpenAIResponse = serde_json::from_str(&response_text)?;
+
+    let response_text = response
+        .choices
+        .get(0)
+        .and_then(|c| Some(c.message.content.clone()))
+        .unwrap_or_else(|| String::from("No response"));
+
+    poise::say_reply(ctx, response_text).await?;
+
+    Ok(())
+}
+
 // Async main function
 #[tokio::main]
 async fn main() {
@@ -80,13 +124,13 @@ async fn main() {
     let framework = poise::Framework::builder()
         .options(poise::FrameworkOptions {
             // (Adding slash commands here)
-            commands: vec![weather()],
+            commands: vec![weather(), weather_joke()],
             ..Default::default()
         })
         .setup(|ctx, _ready, framework| {
             Box::pin(async move {
                 poise::builtins::register_globally(ctx, &framework.options().commands).await?;
-                Ok(Data {})
+                Ok(())
             })
         })
         .build();
