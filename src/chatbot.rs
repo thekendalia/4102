@@ -4,7 +4,7 @@ use reqwest::Client;
 use serde::Deserialize;
 use serenity::async_trait;
 use serenity::client::{Context as SContext, EventHandler};
-use poise::{Context as PoiseContext};
+use poise::Context as PoiseContext;
 use serenity::model::gateway::Ready;
 use tokio;
 
