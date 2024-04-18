@@ -68,6 +68,117 @@ async fn weather(
     Ok(())
 }
 
+#[poise::command(slash_command, prefix_command)]
+async fn temp(
+    ctx: Context<'_>,
+    #[description = "City to check temperature for"] city: Option<String>,
+) -> Result<(), Error> {
+    // Default to Charlotte if no city is provided
+    let city = city // If the user didn't provide a city, default to "Charlotte"
+    .as_deref()
+    .unwrap_or("Charlotte");
+
+    // Call the get_weather function to fetch weather data for the specified city
+    match get_weather(city).await {
+        Ok(weather_response) => {
+            // Extract temperature from the weather response in Kelvin
+            let temperature_kelvin = weather_response.main.temp;
+
+            // Convert temperature from Kelvin to Fahrenheit
+            let temperature_fahrenheit = (temperature_kelvin - 273.15) * (9.0 / 5.0) + 32.0;
+
+            // Convert temperature from Kelvin to Celsius
+            let temperature_celsius = temperature_kelvin - 273.15;
+
+            // Format the response with temperatures in all three units
+            let response = format!(
+                "The temperature in {} is:\n🌡️ {:.2}°K (Kelvin)\n🌡️ {:.2}°C (Celsius)\n🌡️ {:.2}°F (Fahrenheit)",
+                city,
+                temperature_kelvin,
+                temperature_celsius,
+                temperature_fahrenheit
+            );
+
+            // Send the response to the Discord channel
+            ctx.say(response).await?;
+        }
+        Err(_) => {
+            // Handle error if the city is not found or weather data cannot be retrieved
+            let response = format!("Could not find temperature data for '{}'", city);
+            ctx.say(response).await?;
+        }
+    }
+
+    Ok(())
+}
+
+#[poise::command(slash_command)]
+async fn clouds(
+    ctx: Context<'_>,
+    #[description = "City to check cloud coverage for"] city: Option<String>,
+) -> Result<(), Error> {
+    // Default to "Charlotte" if no city is provided
+    let city = city.as_deref().unwrap_or("Charlotte");
+
+    // Call the get_weather function to fetch weather data for the specified city
+    match get_weather(city).await {
+        Ok(weather_response) => {
+            // Extract cloud coverage information from the weather response
+            let cloud_coverage_percentage = weather_response.clouds.all;
+
+            // Format the response with the cloud coverage percentage
+            let response = format!(
+                "The cloud coverage in {} is\n☁️ {:.0}%",
+                city, cloud_coverage_percentage
+            );
+
+            // Send the response to the Discord channel
+            ctx.say(response).await?;
+        }
+        Err(_) => {
+            // Handle error if the city is not found or weather data cannot be retrieved
+            let response = format!("Could not retrieve cloud information for '{}'.", city);
+            ctx.say(response).await?;
+        }
+    }
+
+    Ok(())
+}
+
+#[poise::command(slash_command)]
+async fn wind(
+    ctx: Context<'_>,
+    #[description = "City to check wind speed for"] city: Option<String>,
+) -> Result<(), Error> {
+    // Default to "Charlotte" if no city is provided
+    let city = city.as_deref().unwrap_or("Charlotte");
+
+    // Call the get_weather function to fetch weather data for the specified city
+    match get_weather(city).await {
+        Ok(weather_response) => {
+            // Extract wind speed information from the weather response
+            let wind_speed_meters_per_sec = weather_response.wind.get_speed_meters_per_sec();
+            let wind_speed_mph = weather_response.wind.get_speed_mph();
+
+            // Format the response with the wind speed in miles per hour
+            let response = format!(
+                "The wind speed in {} is\n💨 {:.2} mph ({} m/s)",
+                city, wind_speed_mph, wind_speed_meters_per_sec
+            );
+
+            // Send the response to the Discord channel
+            ctx.say(response).await?;
+        }
+        Err(_) => {
+            // Handle error if the city is not found or weather data cannot be retrieved
+            let response = format!("Could not retrieve wind speed information for '{}'.", city);
+            ctx.say(response).await?;
+        }
+    }
+
+    Ok(())
+}
+
 // Async main function
 #[tokio::main]
 async fn main() {
@@ -80,7 +191,7 @@ async fn main() {
     let framework = poise::Framework::builder()
         .options(poise::FrameworkOptions {
             // (Adding slash commands here)
-            commands: vec![weather()],
+            commands: vec![weather(), temp(), clouds(), wind()], 
             ..Default::default()
         })
         .setup(|ctx, _ready, framework| {
