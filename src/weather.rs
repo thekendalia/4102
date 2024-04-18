@@ -33,20 +33,8 @@ pub struct Main {
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Wind {
-    pub speed: f64,
+    speed: f64,
     deg: u32,
-}
-
-impl Wind {
-    //public method to get wind speed in meters per second
-    pub fn get_speed_meters_per_sec(&self) -> f64 {
-        self.speed
-    }
-
-    //public method to get wind speed in miles per hour
-    pub fn get_speed_mph(&self) -> f64 {
-        self.speed * 2.23694  // Convert m/s to mph
-    }
 }
 
 #[derive(Debug, Deserialize)]
@@ -59,14 +47,7 @@ pub struct Rain {
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Clouds {
-    pub all: u32,
-}
-
-#[allow(dead_code)]
-impl Clouds {
-    pub fn get_cloud_coverage(&self) -> u32 {
-        self.all
-    }
+    all: u32,
 }
 
 #[derive(Debug, Deserialize)]
