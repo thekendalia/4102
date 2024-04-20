@@ -45,7 +45,7 @@ impl Wind {
 
     //public method to get wind speed in miles per hour
     pub fn get_speed_mph(&self) -> f64 {
-        self.speed * 2.23694  // Convert m/s to mph
+        self.speed * 2.23694 // Convert m/s to mph
     }
 }
 
@@ -76,8 +76,8 @@ pub struct Sys {
     sys_type: u32,
     id: u32,
     country: String,
-    sunrise: u64,
-    sunset: u64,
+    pub sunrise: u64,
+    pub sunset: u64,
 }
 
 #[derive(Debug, Deserialize)]
