@@ -3,14 +3,17 @@
 
 use dotenv::dotenv;
 use poise::serenity_prelude as serenity;
+use poise::Context as PoiseContext;
+use reqwest::Client;
+use serde::Deserialize;
 use serenity::async_trait;
 use serenity::client::{Context as SContext, EventHandler};
 use serenity::model::gateway::Ready;
-use poise::Context as PoiseContext;
-use serde::Deserialize;
-use reqwest::Client;
-mod weather;
 mod chatbot;
+mod weather;
+use chrono::prelude::*;
+use chrono::{DateTime, Local, NaiveDateTime, TimeZone, Utc};
+use substring::Substring;
 use tokio;
 use weather::get_weather;
 
@@ -65,7 +68,7 @@ async fn weather(
 
             // Send formatted response to Discord
             ctx.say(response).await?;
-        },
+        }
         Err(_) => {
             let response = format!("The city '{}' doesn't exist or couldn't be found.", city);
             // Send error response here
@@ -83,8 +86,8 @@ async fn temp(
 ) -> Result<(), Error> {
     // Default to Charlotte if no city is provided
     let city = city // If the user didn't provide a city, default to "Charlotte"
-    .as_deref()
-    .unwrap_or("Charlotte");
+        .as_deref()
+        .unwrap_or("Charlotte");
 
     // Call the get_weather function to fetch weather data for the specified city
     match get_weather(city).await {
@@ -113,6 +116,48 @@ async fn temp(
         Err(_) => {
             // Handle error if the city is not found or weather data cannot be retrieved
             let response = format!("Could not find temperature data for '{}'", city);
+            ctx.say(response).await?;
+        }
+    }
+
+    Ok(())
+}
+
+#[poise::command(slash_command, prefix_command)]
+async fn sun(
+    ctx: Context<'_>,
+    #[description = "City to check temperature for"] city: Option<String>,
+) -> Result<(), Error> {
+    // Default to Charlotte if no city is provided
+    let city = city // If the user didn't provide a city, default to "Charlotte"
+        .as_deref()
+        .unwrap_or("Charlotte");
+
+    // Call the get_weather function to fetch weather data for the specified city
+    match get_weather(city).await {
+        Ok(weather_response) => {
+            // Extract temperature from the weather response in Kelvin
+            let sunset = weather_response.sys.sunset as i64;
+            let sunrise = weather_response.sys.sunrise as i64;
+            let sunset_utc = Utc.timestamp_opt(sunset, 0).unwrap().naive_utc();
+            let sunrise_utc = Utc.timestamp_opt(sunrise, 0).unwrap().naive_utc();
+            let dt = Local::now();
+            let offset = dt.offset().clone();
+            let sunset_local = DateTime::<Local>::from_naive_utc_and_offset(sunset_utc, offset);
+            let sunrise_local = DateTime::<Local>::from_naive_utc_and_offset(sunrise_utc, offset);
+
+            // Format the response as a string with UTC date and time
+            let response = format!(
+                "The sunset/sunrise in {} is:\nSunrise🌅 {:?}\nSunset🌙 {:?}",
+                city, sunrise_local, sunset_local,
+            );
+
+            // Send the response to the Discord channel
+            ctx.say(response).await?;
+        }
+        Err(_) => {
+            // Handle error if the city is not found or weather data cannot be retrieved
+            let response = format!("Could not find sunset/sunrise data for '{}'", city);
             ctx.say(response).await?;
         }
     }
@@ -186,6 +231,46 @@ async fn wind(
 
     Ok(())
 }
+#[poise::command(slash_command, prefix_command)]
+pub async fn weatherfact(
+    ctx: Context<'_>,
+    #[description = "City to check wind speed for"] city: Option<String>,
+) -> Result<(), Error> {
+    let city = city.as_deref().unwrap_or("Charlotte");
+
+    let http_client = Client::new();
+    let api = std::env::var("OPENAI_API_KEY").expect("missing OPENAI_API_KEY");
+    let request_body = serde_json::json!({
+        "model": "gpt-3.5-turbo",
+        "messages": [
+            {
+                "role": "user",
+                "content": format!("what is a different crazy historical weather fact for the city of {} in only 2 sentences", city)
+            }
+        ],
+        "max_tokens": 100,
+    });
+
+    let res = http_client
+        .post("https://api.openai.com/v1/chat/completions")
+        .bearer_auth(api)
+        .json(&request_body)
+        .send()
+        .await?;
+
+    let response_text = res.text().await?;
+    let response: chatbot::OpenAIResponse = serde_json::from_str(&response_text)?;
+
+    let response_text = response
+        .choices
+        .get(0)
+        .and_then(|c| Some(c.message.content.clone()))
+        .unwrap_or_else(|| String::from("No response"));
+
+    poise::say_reply(ctx, response_text).await?;
+
+    Ok(())
+}
 
 #[poise::command(slash_command, prefix_command)]
 pub async fn weather_joke(ctx: Context<'_>) -> Result<(), Error> {
@@ -235,7 +320,15 @@ async fn main() {
     let framework = poise::Framework::builder()
         .options(poise::FrameworkOptions {
             // (Adding slash commands here)
-            commands: vec![weather(), weather_joke(), temp(), clouds(), wind()],
+            commands: vec![
+                weather(),
+                weather_joke(),
+                temp(),
+                clouds(),
+                wind(),
+                sun(),
+                weatherfact(),
+            ],
             ..Default::default()
         })
         .setup(|ctx, _ready, framework| {
@@ -255,4 +348,3 @@ async fn main() {
     // Start the client
     client.unwrap().start().await.unwrap();
 }
-
