@@ -2,6 +2,7 @@ use reqwest;
 use reqwest::header;
 use serde::Deserialize;
 use std::env;
+use rand::{Rng, thread_rng};
 
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
@@ -33,8 +34,20 @@ pub struct Main {
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Wind {
-    speed: f64,
+    pub speed: f64,
     deg: u32,
+}
+
+impl Wind {
+    //public method to get wind speed in meters per second
+    pub fn get_speed_meters_per_sec(&self) -> f64 {
+        self.speed
+    }
+
+    //public method to get wind speed in miles per hour
+    pub fn get_speed_mph(&self) -> f64 {
+        self.speed * 2.23694 // Convert m/s to mph
+    }
 }
 
 #[derive(Debug, Deserialize)]
@@ -47,18 +60,22 @@ pub struct Rain {
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Clouds {
-    all: u32,
+    pub all: u32,
+}
+
+#[allow(dead_code)]
+impl Clouds {
+    pub fn get_cloud_coverage(&self) -> u32 {
+        self.all
+    }
 }
 
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Sys {
-    #[serde(rename = "type")]
-    sys_type: u32,
-    id: u32,
-    country: String,
-    sunrise: u64,
-    sunset: u64,
+    pub country: String,
+    pub sunrise: u64,
+    pub sunset: u64,
 }
 
 #[derive(Debug, Deserialize)]
@@ -86,7 +103,7 @@ pub async fn get_weather(
     headers.insert("X-RapidAPI-Key", api_key.parse().unwrap());
 
     let client = reqwest::Client::builder().build()?;
-
+    
     let res = client
         .get(&format!(
             "https://weather-api138.p.rapidapi.com/weather?city_name={}",
@@ -94,12 +111,49 @@ pub async fn get_weather(
         ))
         .headers(headers)
         .send()
-        .await?
-        .text()
         .await?;
-
-    let weather_response: WeatherResponse = serde_json::from_str(&res)?;
-
-    Ok(weather_response)
+    
+    if res.status().is_success() {
+        let body = res.text().await?;
+        let weather_response: WeatherResponse = serde_json::from_str(&body)?;
+        Ok(weather_response)
+    } else {
+        Err(format!("Request failed with status code: {}", res.status()).into())
+    }
 }
+pub fn get_random_city() -> (&'static str, &'static str, &'static str) {
+    let cities = vec![
+        ("New York", "USA", "🇺🇸"), ("Los Angeles", "USA", "🇺🇸"), ("Miami", "USA", "🇺🇸"), ("Honolulu", "USA", "🇺🇸"),
+        ("Vancouver", "Canada", "🇨🇦"), ("Toronto", "Canada", "🇨🇦"), ("Mexico City", "Mexico", "🇲🇽"), ("Monterrey", "Mexico", "🇲🇽"),
+        ("London", "UK", "🇬🇧"), ("Manchester", "UK", "🇬🇧"), ("Munich", "Germany", "🇩🇪"), ("Berlin", "Germany", "🇩🇪"),
+        ("Madrid", "Spain", "🇪🇸"), ("Barcelona", "Spain", "🇪🇸"), ("Milan", "Italy", "🇮🇹"), ("Rome", "Italy", "🇮🇹"),
+        ("Paris", "France", "🇫🇷"), ("Marseille", "France", "🇫🇷"), ("Glasgow", "UK", "🇬🇧"),
+        ("Copenhagen", "Denmark", "🇩🇰"), ("Oslo", "Norway", "🇳🇴"), ("Stockholm", "Sweden", "🇸🇪"), ("Helsinki", "Finland", "🇫🇮"),
+        ("Moscow", "Russia", "🇷🇺"), ("Kyiv", "Ukraine", "🇺🇦"), ("Warsaw", "Poland", "🇵🇱"), ("Prague", "Czechia", "🇨🇿"),
+        ("Amsterdam", "Netherlands", "🇳🇱"), ("Brussels", "Belgium", "🇧🇪"), ("Bern", "Switzerland", "🇨🇭"), ("Vienna", "Austria", "🇦🇹"),
+        ("Budapest", "Hungary", "🇭🇺"), ("Zagreb", "Croatia", "🇭🇷"), ("Bucharest", "Romania", "🇷🇴"), ("Athens", "Greece", "🇬🇷"),
+        ("Lisbon", "Portugal", "🇵🇹"), ("Istanbul", "Turkey", "🇹🇷"), ("Casablanca", "Morocco", "🇲🇦"), ("Baku", "Azerbaijan", "🇦🇿"),
+        ("Cairo", "Egypt", "🇪🇬"), ("Riyadh", "Saudi Arabia", "🇸🇦"), ("Doha", "Qatar", "🇶🇦"), ("Dubai", "UAE", "🇦🇪"),
+        ("Muscat", "Oman", "🇴🇲"), ("Tehran", "Iran", "🇮🇷"), ("Lagos", "Nigeria", "🇳🇬"), ("Dakar", "Senegal", "🇸🇳"), ("Cape Town", "South Africa", "🇿🇦"),
+        ("Mumbai", "India", "🇮🇳"), ("Dhaka", "Bangladesh", "🇧🇩"), ("Bangkok", "Thailand", "🇹🇭"), ("Kuala Lumpur", "Malaysia", "🇲🇾"),
+        ("Tokyo", "Japan", "🇯🇵"), ("Seoul", "South Korea", "🇰🇷"), ("Beijing", "China", "🇨🇳"), ("Shanghai", "China", "🇨🇳"),
+        ("Sydney", "Australia", "🇦🇺"), ("Perth", "Australia", "🇦🇺"), ("Melbourne", "Australia", "🇦🇺"), ("Auckland", "New Zealand", "🇳🇿"),
+        ("Reykjavík", "Iceland", "🇮🇸"), ("Nairobi", "Kenya", "🇰🇪"), ("Harare", "Zimbabwe", "🇿🇼"), ("Luanda", "Angola", "🇦🇴"),
+        ("Libreville", "Gabon", "🇬🇦"), ("Lusaka", "Zambia", "🇿🇲"), ("Freetown", "Sierra Leone", "🇸🇱"), ("Algiers", "Algeria", "🇩🇿"),
+        ("Rio de Janeiro", "Brazil", "🇧🇷"), ("Buenos Aires", "Argentina", "🇦🇷"), ("Montevideo", "Uruguay", "🇺🇾"),
+        ("Santiago", "Chile", "🇨🇱"), ("Lima", "Peru", "🇵🇪"), ("La Paz", "Bolivia", "🇧🇴"), ("Medellín", "Colombia", "🇨🇴"),
+        ("Panama City", "Panama", "🇵🇦"), ("San Jose", "Costa Rica", "🇨🇷"), ("San Salvador", "El Salvador", "🇸🇻"),
+        ("Havana", "Cuba", "🇨🇺"), ("Guatemala City", "Guatemala", "🇬🇹"), ("Tegucigalpa", "Honduras", "🇭🇳"), ("Managua", "Nicaragua", "🇳🇮"),
+        ("Kingston", "Jamaica", "🇯🇲"), ("Santo Domingo", "Dominican Replublic", "🇩🇴"), ("Bridgetown", "Barbados", "🇧🇧"),
+        ("Suva", "Fiji", "🇫🇯"), ("Port Moresby", "Papua New Guinea", "🇵🇬"), ("Ulaanbaatar", "Mongolia", "🇲🇳")
+
+    ];
+    // This creates a local variable `rng`
+    let mut rng = thread_rng();
+
+    //let idx = rand::thread_rng().gen_range(0..cities.len());
+    let idx = rng.gen_range(0..cities.len());
+    cities[idx]
+}
+
 
