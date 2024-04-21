@@ -69,7 +69,8 @@ async fn weather(
             // Send formatted response to Discord
             ctx.say(response).await?;
         }
-        Err(_) => {
+        Err(e) => {
+            println!("Error: {:?}", e);
             let response = format!("The city '{}' doesn't exist or couldn't be found.", city);
             // Send error response here
             ctx.say(response).await?;
