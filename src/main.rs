@@ -308,6 +308,35 @@ pub async fn weather_joke(ctx: Context<'_>) -> Result<(), Error> {
     Ok(())
 }
 
+#[poise::command(slash_command, prefix_command)]
+async fn random(
+    ctx: Context<'_>,
+) -> Result<(), Error> {
+    let (city, country, flag) = weather::get_random_city();  // Get a random city name
+
+    match weather::get_weather(city).await {
+        Ok(weather_response) => {
+            let fahrenheit = (weather_response.main.temp - 273.15) * 9.0 / 5.0 + 32.0;
+            let feels_like = (weather_response.main.feels_like - 273.15) * 9.0 / 5.0 + 32.0;
+            let temp_min = (weather_response.main.temp_min - 273.15) * 9.0 / 5.0 + 32.0;
+            let temp_max = (weather_response.main.temp_max - 273.15) * 9.0 / 5.0 + 32.0;
+            let pressure = weather_response.main.pressure as f64 * 0.02953;
+            
+            let response = format!(
+                "The weather in {}, {} {} is:\n🌡️ Temp: {:.2}°F  😓 Feels Like: {:.2}°F,\n🧊 Min Temp: {:.2}°F  🔥 Max Temp: {:.2}°F\n🌬️ Pressure: {:.2}inHg  💧 Humidity: {}%",
+                city, country, flag, fahrenheit, feels_like, temp_min, temp_max, pressure, weather_response.main.humidity
+            );
+ 
+            ctx.say(response).await?;
+        },
+        Err(_) => {
+            ctx.say(format!("Could not find weather data for '{}', '{}'", city, country)).await?;
+        }
+    }
+
+    Ok(())
+}
+
 // Async main function
 #[tokio::main]
 async fn main() {
@@ -328,6 +357,7 @@ async fn main() {
                 wind(),
                 sun(),
                 weatherfact(),
+                random(),
             ],
             ..Default::default()
         })
