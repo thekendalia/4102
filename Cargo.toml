@@ -16,4 +16,5 @@ dotenv = "0.15.0"
 poise = "0.6.1"
 openai = "1.0.0-alpha.14"
 async-trait = "0.1"
+rand = "0.8"
 
