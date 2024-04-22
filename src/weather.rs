@@ -7,8 +7,8 @@ use rand::{Rng, thread_rng};
 #[derive(Debug, Deserialize)]
 #[allow(dead_code)]
 pub struct Coord {
-    lon: f64,
-    lat: f64,
+    pub lon: f64,
+    pub lat: f64,
 }
 
 #[derive(Debug, Deserialize)]

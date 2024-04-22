@@ -338,6 +338,73 @@ async fn random(
     Ok(())
 }
 
+#[poise::command(slash_command, prefix_command)]
+async fn distance(
+    ctx: Context<'_>,
+    #[description = "First city"] city1: Option<String>,
+    #[description = "Second city"] city2: Option<String>,
+) -> Result<(), Error> {
+    let city1 = city1.as_deref().unwrap_or("Charlotte");
+    let city2 = city2.as_deref().unwrap_or("Charlotte"); 
+
+    pub const PI: f64 = 3.14159265358979323846264338327950288_f64; // 3.1415926535897931f64
+
+    match get_weather(city1).await {
+        Ok(weather_response) => { 
+            let coord1 = weather_response.coord.lat;
+            let coord2 = weather_response.coord.lon;
+            let _response = format!(
+                "The weather in {}, lat {}, lon {}",
+                city1, coord1, coord2
+            );
+
+            // ctx.say(response).await?;
+        
+
+        match get_weather(city2).await {
+            Ok(weather_response) => { 
+    
+                let coord3 = weather_response.coord.lat;
+                let coord4 = weather_response.coord.lon;
+
+                use std::f64::consts::PI;
+
+            fn haversine_distance(coord1: f64, coord2: f64, coord3: f64, coord4: f64) -> f64 {
+                let r = 6371.0; // Earth's radius in kilometers
+                let d_lat = (coord3 - coord1) * (PI / 180.0);
+                let d_lon = (coord4 - coord2) * (PI / 180.0);
+                let a = (d_lat / 2.0).sin().powi(2)
+                        + (coord1 * (PI / 180.0)).cos()
+                        * (coord3 * (PI / 180.0)).cos()
+                        * (d_lon / 2.0).sin().powi(2);
+                let c = 2.0 * ((a.sqrt()).atan2((1.0 - a).sqrt()));
+                let d = r * c;
+    
+                d // Return the distance
+            }
+                let distance = haversine_distance(coord1, coord2, coord3, coord4);
+                let miles = distance * 0.621371;
+                let _response = format!(
+                    "The distance between {} and {} is {:.2} kilometers, and {:.2} miles.",
+                    city1, city2, distance, miles,
+                );
+    
+                ctx.say(_response).await?;
+            },
+            Err(_) => {
+                ctx.say(format!("Could not find weather data for '{}'", city2)).await?;
+            }
+        }
+        },
+        Err(_) => {
+            ctx.say(format!("Could not find weather data for '{}'", city1)).await?;
+        }
+    
+    }
+
+    Ok(())
+}
+
 // Async main function
 #[tokio::main]
 async fn main() {
@@ -359,6 +426,7 @@ async fn main() {
                 sun(),
                 weatherfact(),
                 random(),
+                distance(),
             ],
             ..Default::default()
         })
