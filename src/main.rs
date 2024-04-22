@@ -11,6 +11,7 @@ use serenity::client::{Context as SContext, EventHandler};
 use serenity::model::gateway::Ready;
 mod chatbot;
 mod weather;
+use rand::seq::SliceRandom;
 use chrono::prelude::*;
 use chrono::{DateTime, Local, NaiveDateTime, TimeZone, Utc};
 use substring::Substring;
@@ -73,6 +74,7 @@ async fn weather(
             println!("Error: {:?}", e);
             let response = format!("The city '{}' doesn't exist or couldn't be found.", city);
             // Send error response here
+            println!("{}", response);
             ctx.say(response).await?;
         }
     }
@@ -277,12 +279,19 @@ pub async fn weatherfact(
 pub async fn weather_joke(ctx: Context<'_>) -> Result<(), Error> {
     let http_client = Client::new();
     let api = std::env::var("OPENAI_API_KEY").expect("missing OPENAI_API_KEY");
+    let prompts = [
+        "tell me a funny observation about the weather",
+        "can you make a pun about meteorologists?",
+        "give me a witty weather joke",
+        "tell me a clever joke involving rain or snow",
+    ];
+    let chosen_prompt = prompts.choose(&mut rand::thread_rng()).unwrap();
     let request_body = serde_json::json!({
         "model": "gpt-3.5-turbo",
         "messages": [
             {
                 "role": "user",
-                "content": "tell me a joke about the weather or jokes about meteorologists"
+                "content": chosen_prompt
             }
         ],
         "max_tokens": 50,
